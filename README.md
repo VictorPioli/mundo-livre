@@ -1,4 +1,4 @@
-# React 
+# React
 
 Projeto desenvolvido em React, utilizando as bibliotecas:
 

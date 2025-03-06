@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Card = styled.div`
   width: 100%;
-  height: 200px;
+  height: 240px;
   background-color: ${(props) => props.cor};
   border-radius: 10px;
   padding: 5px;
@@ -33,12 +33,14 @@ export const Display = styled.div`
   justify-content: center;
   margin-top: 10%;
   margin-bottom: 20px;
-
+  font-size: 20px;
   button {
     border-radius: 5px;
     border: 1px solid black;
     color: ${(props) => props.cor};
     margin: 0px 10px;
+    cursor: pointer;
+    font-weight: bold;
   }
 `;
 
@@ -53,7 +55,7 @@ export const DisplayButtons = styled.div`
     border: 1px solid black;
     margin: 5px;
     color: ${(props) => props.cor};
-
+    cursor: pointer;
     &:hover {
       opacity: 0.8;
     }

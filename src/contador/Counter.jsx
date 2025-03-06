@@ -6,6 +6,7 @@ import {
   removeCounter,
   incrementAsync,
   addCounterAsync,
+  resetCounter,
 } from "./counterSlice";
 import {
   Card,
@@ -26,7 +27,7 @@ export function Counter() {
       <Header>
         <h1>Redux - Múltiplos Contadores</h1>
         <button onClick={() => dispatch(addCounterAsync())}>
-          Adicionar Contador
+          Adicionar Contadores
         </button>
         {counters == 0 && <p>Ainda não há contadores</p>}
       </Header>
@@ -44,6 +45,9 @@ export function Counter() {
               <DisplayButtons cor={color}>
                 <button onClick={() => dispatch(incrementAsync(id))}>
                   Async
+                </button>
+                <button onClick={() => dispatch(resetCounter(id))}>
+                  Reset
                 </button>
                 <button
                   remove={true}

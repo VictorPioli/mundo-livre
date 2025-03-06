@@ -32,10 +32,14 @@ export const counterSlice = createSlice({
     removeCounter: (state, action) => {
       state.counters = state.counters.filter((c) => c.id !== action.payload);
     },
+    resetCounter: (state, action) => {
+      const counter = state.counters.find((c) => c.id === action.payload);
+      if (counter) counter.value = 0;
+    },
   },
 });
 
-export const { addCounter, increment, decrement, removeCounter } =
+export const { addCounter, increment, decrement, removeCounter, resetCounter } =
   counterSlice.actions;
 export default counterSlice.reducer;
 
